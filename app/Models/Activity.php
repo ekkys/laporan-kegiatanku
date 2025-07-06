@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Activity extends Model
 {
     use HasFactory;
+     protected $fillable = [
+        'title',       // Tambahkan baris ini
+        'description',
+        'image_path',
+    ];
 }

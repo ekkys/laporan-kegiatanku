@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\ActivityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ActivityController::class, 'index'])->name('activities.index');
+Route::get('/activities/create', [ActivityController::class, 'create'])->name('activities.create');
+Route::post('/activities', [ActivityController::class, 'store'])->name('activities.store');
+Route::post('/activities/generate-pdf', [ActivityController::class, 'generatePdf'])->name('activities.generate_pdf');
