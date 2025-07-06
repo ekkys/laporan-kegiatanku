@@ -6,7 +6,7 @@
         body { font-family: sans-serif; }
         table { width: 100%; border-collapse: collapse; }
         th, td { border: 1px solid black; padding: 8px; text-align: left; }
-        img { max-width: 150px; height: auto; }
+        img { max-width: 500px; height: auto; }
     </style>
 </head>
 <body>
